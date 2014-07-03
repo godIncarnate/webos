@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- IE=edge告诉IE使用最新的引擎渲染网页，chrome=1则可以激活Chrome Frame -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>webos</title>
+<meta name="description" content=" webos" />
+<meta name="keywords" content="webos" />
+<link rel="stylesheet" href="3rd/plugins/jq_3rd_plugin.css?v=5.0">
+<link rel="stylesheet" href="img/ui/index.css?v=5.0">
+
+<!--默认的皮肤设置在core.js 文件里面  -->
+<!-- <link rel="stylesheet" href="img/skins/v5.css?v=5.0" id="window-skin"> -->
+</head>
+
+<body>
+	<div class="loading"></div>
+	<!-- 桌面 -->
+	<div id="desktop">
+		<div id="desk">
+			<div id="desk-1" class="desktop-container">
+				<div class="scrollbar scrollbar-x"></div>
+				<div class="scrollbar scrollbar-y"></div>
+			</div>
+			<div id="desk-2" class="desktop-container">
+				<div class="scrollbar scrollbar-x"></div>
+				<div class="scrollbar scrollbar-y"></div>
+			</div>
+			<div id="desk-3" class="desktop-container">
+				<div class="scrollbar scrollbar-x"></div>
+				<div class="scrollbar scrollbar-y"></div>
+			</div>
+			<div id="desk-4" class="desktop-container">
+				<div class="scrollbar scrollbar-x"></div>
+				<div class="scrollbar scrollbar-y"></div>
+			</div>
+			<div id="desk-5" class="desktop-container">
+				<div class="scrollbar scrollbar-x"></div>
+				<div class="scrollbar scrollbar-y"></div>
+			</div>
+			<div id="dock-bar">
+				<div id="dock-container">
+					<div class="dock-middle">
+						<div class="dock-applist"></div>
+						<div class="dock-toollist">
+							<a href="javascript:;" class="dock-tool-pinyin" title="QQ拼音输入法"></a>
+							<a href="javascript:;" class="dock-tool-style" title="主题设置"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="task-bar-bg1"></div>
+		<div id="task-bar-bg2"></div>
+		<div id="task-bar">
+			<div id="task-next">
+				<a href="javascript:;" id="task-next-btn" hidefocus="true"></a>
+			</div>
+			<div id="task-content">
+				<div id="task-content-inner"></div>
+			</div>
+			<div id="task-pre">
+				<a href="javascript:;" id="task-pre-btn" hidefocus="true"></a>
+			</div>
+		</div>
+		<div id="nav-bar">
+			<div class="nav-wrapper">
+				<div class="nav-container" id="navContainer">
+					<div class="indicator indicator-header" id="navbarHeaderImg">
+						<img src="img/ui/avatar.png" class="indicator-header-img">
+					</div>
+					<a class="indicator indicator-1" href="javascript:;" index="1"
+						title="桌面1"> <span class="indicator-icon-bg"></span> <span
+						class="indicator-icon indicator-icon-1">1</span>
+					</a> <a class="indicator indicator-2" href="javascript:;" index="2"
+						title="桌面2"> <span class="indicator-icon-bg"></span> <span
+						class="indicator-icon indicator-icon-2">2</span>
+					</a> <a class="indicator indicator-3" href="javascript:;" index="3"
+						title="桌面3"> <span class="indicator-icon-bg"></span> <span
+						class="indicator-icon indicator-icon-3">3</span>
+					</a> <a class="indicator indicator-4" href="javascript:;" index="4"
+						title="桌面4"> <span class="indicator-icon-bg"></span> <span
+						class="indicator-icon indicator-icon-4">4</span>
+					</a> <a class="indicator indicator-5" href="javascript:;" index="5"
+						title="桌面5"> <span class="indicator-icon-bg"></span> <span
+						class="indicator-icon indicator-icon-5">5</span>
+					</a> <a class="indicator indicator-manage" href="javascript:;"
+						title="全局视图"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 全局视图 -->
+	<div id="appmanage">
+		<a class="amg_close" href="javascript:;"></a>
+		<div id="amg_dock_container"></div>
+		<div class="amg_line_x"></div>
+		<div id="amg_folder_container">
+			<div class="folderItem">
+				<div class="folder_bg folder_bg1"></div>
+				<div class="folderOuter">
+					<div class="folderInner"></div>
+					<div class="scrollBar"></div>
+				</div>
+			</div>
+			<div class="folderItem">
+				<div class="folder_bg folder_bg2"></div>
+				<div class="folderOuter">
+					<div class="folderInner"></div>
+					<div class="scrollBar"></div>
+				</div>
+				<div class="amg_line_y"></div>
+			</div>
+			<div class="folderItem">
+				<div class="folder_bg folder_bg3"></div>
+				<div class="folderOuter">
+					<div class="folderInner"></div>
+					<div class="scrollBar"></div>
+				</div>
+				<div class="amg_line_y"></div>
+			</div>
+			<div class="folderItem">
+				<div class="folder_bg folder_bg4"></div>
+				<div class="folderOuter">
+					<div class="folderInner"></div>
+					<div class="scrollBar"></div>
+				</div>
+				<div class="amg_line_y"></div>
+			</div>
+			<div class="folderItem">
+				<div class="folder_bg folder_bg5"></div>
+				<div class="folderOuter">
+					<div class="folderInner"></div>
+					<div class="scrollBar"></div>
+				</div>
+				<div class="amg_line_y"></div>
+			</div>
+		</div>
+	</div>
+	<script src="3rd/jquery-1.8.1.min.js"></script>
+	<script src="3rd/plugins/jq_3rd_plugin.js?v=5.0"></script>
+	<script src="js/templates.js?v=5.0"></script>
+	<script src="js/kernel.js?v=5.0"></script>
+	<script src="js/data.js?v=5.0"></script>
+	<script src="3rd/artDialog/jquery.artDialog.js?skin=aero"></script>
+	<script type="text/javascript">
+		//处理键盘事件  
+		function doKey(e) {
+			var ev = e || window.event;//获取event对象  
+			var obj = ev.target || ev.srcElement;//获取事件源  
+			var t = obj.type || obj.getAttribute('type');//获取事件源类型  
+			var readonly = obj.readonly || obj.getAttribute('readonly');
+
+			if ((ev.keyCode == 8 && t != "password" && t != "text" && t != "textarea")
+					|| (ev.keyCode == 8 && readonly == 'readonly')) {
+				return false;
+			}
+		}
+		//禁止后退键 作用于Firefox、Opera  
+		document.onkeypress = doKey;
+		//禁止后退键  作用于IE、Chrome  
+		document.onkeydown = doKey;
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			//IE下禁止选中
+			document.body.onselectstart = document.body.ondrag = function() {
+				return false;
+			}
+			$('.loading').hide();
+			$('#desktop').show();
+
+			//初始化
+			WEB_OS.base.init();
+
+			//用户信息绑定点击事件
+			$('.indicator-header-img').bind('click', function(e) {
+				WEB_OS.window.createTemp({
+					id : 'yhzx',
+					title : '用户中心',
+					url : '#',
+					width : 520,
+					height : 420,
+					isresize : false,
+					isflash : false
+				});
+			});
+		});
+	</script>
+</body>
+</html>
