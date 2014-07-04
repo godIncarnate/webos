@@ -183,7 +183,7 @@ WEB_OS.app = (function() {
 		updateXY: function(i, func) {
 			$.cookie("webos_appXY", i, {
 				expires: 3650
-			})
+			});
 			WEB_OS.CONFIG.appXY = i;
 			if (typeof(func) == 'function'){
 				func();
@@ -1289,7 +1289,10 @@ WEB_OS.navbar = (function() {
 
 			// 设置默认选中页
 			var nav = $('#navContainer');
-			nav.addClass('nav-current-' + WEB_OS.CONFIG.desk);
+			var cIndex= ($.cookie("webos_switchindex") == null) ? WEB_OS.CONFIG.desk : $
+			.cookie("webos_switchindex")
+			nav.addClass('nav-current-' + cIndex);
+			WEB_OS.CONFIG.desk = cIndex;
 
 		},
 		move: function() {
@@ -1372,7 +1375,12 @@ WEB_OS.navbar = (function() {
 											$(this).removeClass('animated');
 											nav.removeClass('nav-current-' + currindex).addClass('nav-current-'
 											+ switchindex);
-											WEB_OS.CONFIG.desk = switchindex;
+											$.cookie("webos_switchindex", switchindex, {
+												expires: 3650
+											});
+											
+											WEB_OS.CONFIG.desk = $.cookie("webos_switchindex");
+											
 										});
 									}
 								}
