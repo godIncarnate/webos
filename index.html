@@ -41,31 +41,33 @@
 
 <p><img src="images/page1.png" alt="主页"><img src="images/page2.png" alt="全局视图"></p>
 
-<h3>
-<a name="%E5%AF%B9%E5%A4%96%E6%8E%A5%E5%8F%A3" class="anchor" href="#%E5%AF%B9%E5%A4%96%E6%8E%A5%E5%8F%A3"><span class="octicon octicon-link"></span></a>对外接口</h3>
+<h3>对外接口</h3>
 
-<p>如果你需要在你的app中打开另外的app需要调用</p>
+<p>如果你需要在你的app中打开另外的app需要调用这个函数来完成。</p>
 
-<pre><code>parent.Windows.openNoGroupWindow(url, param,config)
-</code></pre>
-
-<p>这个函数来完成。</p>
+<p><code>parent.Windows.openNoGroupWindow(module, param,config)</code></p>
 
 <blockquote>
-<p>url 需要打开的app的模块路径</p>
+  <p><code>module</code> 需要打开的app的模块路径 例如http://baidu.com</p>
 </blockquote>
 
-<p>param 需要打开的app的Iframe容器接受的参数，在需要的打开的app里面用global.openId获取，一般建议param最好传递的简单的字符串，也可传递复杂的JSON串（不推荐，会影响效率以及长度的限制，浏览器？传值方式有长度限制）</p>
+<hr />
 
-<p>config 传递给要打开app的配置参数</p>
+<blockquote>
+  <p><code>param</code> 需要打开的app的Iframe容器接受的参数，在需要的打开的app里面用使用</p>
+</blockquote>
 
-<ul>
-<li><p>name 要打开的app显示的标题</p></li>
-<li><p>height 要打开app的高度 默认高度为600</p></li>
-<li><p>width 要打开app的宽度 默认宽度为800</p></li>
-<li><p>maximized 是否最大化打开的app</p></li>
-<li><p>callback 传递给要打开的app 一个回调</p></li>
-</ul>
+<hr />
+
+<blockquote>
+  <p><code>config</code> 传递给要打开app的配置参数
+  - name 要打开的app显示的标题
+  - height 要打开app的高度 默认高度为600
+  - width 要打开app的宽度 默认宽度为800
+  - maximized 是否最大化打开的app
+  - callback 传递给要打开的app 一个回调</p>
+</blockquote>
+
         </article>
       </div>
     </div>
