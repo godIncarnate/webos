@@ -2275,12 +2275,17 @@ WEB_OS.window = (function() {
 			$('#task-bar, #nav-bar').removeClass('min-zIndex');
 		},
 		refresh: function(id, type) {
-			// TODO:xx refresh
 			WEB_OS.window.show2top(id, type);
 			var windowId = '#w_' + type + '_' + id,
 				taskId = '#t_' + type + '_' + id;
 			// 判断是应用窗口，还是文件夹窗口
 			if ($(windowId + '_iframe').length != 0){
+				var curFrame = $(windowId + ' .window-frame').children('div').eq(1);
+				curFrame.fadeIn();
+				$(windowId + '_iframe').on('load', function() {
+					curFrame.fadeOut();
+					
+				});
 				$(windowId + '_iframe').attr('src', $(windowId + '_iframe').attr('src'));
 			}
 		},
