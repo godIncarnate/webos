@@ -10,8 +10,6 @@
 <link rel="stylesheet" href="3rd/plugins/jq_3rd_plugin.css?v=5.0">
 <link rel="stylesheet" href="img/ui/index.css?v=5.0">
 
-<!--默认的皮肤设置在core.js 文件里面  -->
-<!-- <link rel="stylesheet" href="img/skins/v5.css?v=5.0" id="window-skin"> -->
 </head>
 
 <body>
@@ -144,50 +142,7 @@
 	<script src="js/kernel.js?v=5.0"></script>
 	<script src="js/data.js?v=5.0"></script>
 	<script src="3rd/artDialog/jquery.artDialog.js?skin=aero"></script>
-	<script type="text/javascript">
-		//处理键盘事件  
-		function doKey(e) {
-			var ev = e || window.event;//获取event对象  
-			var obj = ev.target || ev.srcElement;//获取事件源  
-			var t = obj.type || obj.getAttribute('type');//获取事件源类型  
-			var readonly = obj.readonly || obj.getAttribute('readonly');
+	<script src="js/bootstrap.js?v=5.0"> </script>
 
-			if ((ev.keyCode == 8 && t != "password" && t != "text" && t != "textarea")
-					|| (ev.keyCode == 8 && readonly == 'readonly')) {
-				return false;
-			}
-		}
-		//禁止后退键 作用于Firefox、Opera  
-		document.onkeypress = doKey;
-		//禁止后退键  作用于IE、Chrome  
-		document.onkeydown = doKey;
-	</script>
-
-	<script>
-		$(document).ready(function() {
-			//IE下禁止选中
-			document.body.onselectstart = document.body.ondrag = function() {
-				return false;
-			}
-			$('.loading').hide();
-			$('#desktop').show();
-
-			//初始化
-			WEB_OS.base.init();
-
-			//用户信息绑定点击事件
-			$('.indicator-header-img').bind('click', function(e) {
-				WEB_OS.window.createTemp({
-					id : 'yhzx',
-					title : '用户中心',
-					url : '#',
-					width : 520,
-					height : 420,
-					isresize : false,
-					isflash : false
-				});
-			});
-		});
-	</script>
 </body>
 </html>
